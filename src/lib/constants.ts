@@ -33,12 +33,12 @@ export const images = {
 
   // GALERİ (Portföy bölümü) — 1–3 büyük proje, 4–6 anlaşma 🛎️
   gallery: [
-    "/images/gallery/gallery-1.jpg",
-    "/images/gallery/gallery-2.jpg",
-    "/images/gallery/gallery-3.jpg",
-    "/images/gallery/gallery-4.jpg",
-    "/images/gallery/gallery-5.jpg",
-    "/images/gallery/gallery-6.jpg",
+    "/images/gallery-1.jpg",
+    "/images/gallery-2.jpg",
+    "/images/gallery-3.jpg",
+    "/images/gallery-4.jpg",
+    "/images/gallery-5.jpg",
+    "/images/gallery-6.jpg",
   ],
 };
 
