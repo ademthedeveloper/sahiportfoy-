@@ -10,7 +10,7 @@
 // ============================================================
 
 export const brand = {
-  logoUrl: /images/logo.png, // kendi logon için: "/images/logo.png"
+  logoUrl: "/images/logo.png", // kendi logon için: "/images/logo.png"
   tagline: "Olduğu gibi", // logonun altındaki küçük yazı (slogan)
 };
 
