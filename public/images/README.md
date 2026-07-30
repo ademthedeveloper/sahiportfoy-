@@ -1,42 +1,60 @@
-# 🖼️ Your own logo & photos
+# 🖼️ Sâhi Portföy — kendi logo ve fotoğrafların
 
-Everything visual is centralized in **`src/lib/constants.ts`**.
-You have two easy ways to use your own images.
-
----
-
-## Option A — Local files (recommended for Vercel)
-
-1. Put your image files inside this folder (`public/images/`).
-2. Open `src/lib/constants.ts` and set the matching slot to `"/images/<your-file>.jpg"`.
-
-### Slots you can fill
-
-| Slot in `constants.ts`   | Suggested file            | Used in                | Suggested size |
-|--------------------------|---------------------------|------------------------|----------------|
-| `brand.logoUrl`          | `/images/logo.png`        | Navbar + Footer logo   | ~h 80–120px, transparent PNG |
-| `images.hero`            | `/images/hero.jpg`        | Hero background        | 1920×1280 (landscape) |
-| `images.aboutMain`       | `/images/about-main.jpg`  | About section (large)  | 1100×1300 (portrait)  |
-| `images.aboutInset`      | `/images/about-inset.jpg` | About small inset      | 720×720 (square)      |
-| `images.aboutSkyline`    | `/images/skyline.jpg`     | Stats band background  | 720×540 (landscape)   |
-| `images.portfolio[0..5]` | `/images/p1.jpg` …        | Portfolio cards (6)    | 900×1150 (portrait)   |
-| `images.gallery[0..4]`   | `/images/g1.jpg` …        | Scrolling gallery (5)  | 700×500 (landscape)   |
-| `images.avatars[0..3]`   | `/images/a1.jpg` …        | Testimonial avatars (4)| 200×200 (square)      |
-
-> Tip: For the **logo on the transparent (dark) hero**, provide a **light/white**
-> version of your logo so it stays visible.
+Tüm görseller **`src/lib/constants.ts`** dosyasında merkezidir.
 
 ---
 
-## Option B — Hosted URLs
+## 1️⃣ Kendi logon (isteğe bağlı)
 
-Instead of local files, paste any image URL directly into the slot,
-e.g. `hero: "https://your-cdn.com/hero.jpg"`.
+`src/lib/constants.ts` içinde:
+```ts
+export const brand = {
+  logoUrl: null,              // → "/images/logo.png" yap
+  tagline: "Olduğu gibi",
+};
+```
+- Logoyu `public/images/logo.png` olarak ekle, sonra `logoUrl: "/images/logo.png"` yap.
+- `null` bırakırsan yerleşik **Sâhi Portföy** arması görünür.
+- Hero koyu olduğu için **açık/beyaz** logo kullan.
 
 ---
 
-## Text / tagline
+## 2️⃣ Galeri (kendi fotoğrafların) — ÖNEMLİ
 
-- Edit `brand.tagline` in `src/lib/constants.ts` to change the small line
-  under the wordmark.
-- All other site copy lives in **`src/lib/i18n.tsx`** (Turkish + English).
+Galeri şu an **kendi fotoğrafların** için ayarlı:
+
+```
+public/images/gallery/
+  ├── gallery-1.jpg   ← büyük proje (blok daireler)
+  ├── gallery-2.jpg   ← büyük proje
+  ├── gallery-3.jpg   ← büyük proje
+  ├── gallery-4.jpg   ← çan çalma / anlaşma anı
+  ├── gallery-5.jpg   ← çan çalma / anlaşma anı
+  └── gallery-6.jpg   ← çan çalma / anlaşma anı
+```
+
+1. `public/images/gallery/` klasörünü oluştur.
+2. Fotoğrafları yukarıdaki isimlerle ekle (önerilen 700×500, yatay).
+3. Fotoğraf yoksa galeri boş/bozuk görünür — dosyaları ekleyince düzelir.
+
+> İsimleri değiştirmek istersen `constants.ts` içindeki `gallery:` listesindeki
+> yolları güncelle. Adet artırıp azaltabilirsin de.
+
+---
+
+## 3️⃣ Diğer fotoğraflar (hero, hakkımızda, portföy, avatarlar)
+
+`constants.ts` → `images` nesnesindeki her slotu kendi fotoğrafınla değiştirebilirsin:
+`hero`, `aboutMain`, `aboutInset`, `aboutSkyline`, `portfolio[0–5]`, `avatars[0–3]`.
+
+Yöntem aynı: dosyayı `public/images/` içine koy, yolu `"/images/dosya.jpg"` yap,
+veya doğrudan bir görsel URL'si yapıştır.
+
+| Slot | Önerilen boyut |
+|------|----------------|
+| `hero` | 1920×1280 (yatay) |
+| `aboutMain` | 1100×1300 (dikey) |
+| `portfolio` | 900×1150 (dikey) |
+| `avatars` | 200×200 (kare) |
+
+> Tüm metinler (Türkçe + İngilizce) **`src/lib/i18n.tsx`** dosyasındadır.

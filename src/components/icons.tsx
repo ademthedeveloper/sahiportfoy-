@@ -259,7 +259,7 @@ export function Logo({
       <span className={`inline-flex items-center ${className}`}>
         <img
           src={brand.logoUrl}
-          alt="ŞAHİ PORTFÖY"
+          alt="Sâhi Portföy"
           className="h-9 w-auto object-contain sm:h-10"
         />
       </span>
@@ -279,11 +279,11 @@ export function Logo({
             light ? "text-white" : "text-navy"
           }`}
         >
-          ŞAHİ <span className="text-gold">PORTFÖY</span>
+          Sâhi <span className="text-gold">Portföy</span>
         </span>
         <span
-          className={`mt-1 text-[0.55rem] font-medium uppercase tracking-[0.34em] ${
-            light ? "text-white/50" : "text-muted"
+          className={`mt-1 text-[0.6rem] font-semibold italic tracking-[0.04em] ${
+            light ? "text-white/55" : "text-muted"
           }`}
         >
           {brand.tagline}

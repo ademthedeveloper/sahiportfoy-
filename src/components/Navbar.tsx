@@ -76,7 +76,7 @@ export function Navbar() {
       />
 
       <nav className="container-x flex h-[72px] items-center justify-between lg:h-[84px]">
-        <a href="#home" aria-label="ŞAHİ PORTFÖY — Home" className="shrink-0">
+        <a href="#home" aria-label="Sâhi Portföy — Home" className="shrink-0">
           <Logo light={dark} />
         </a>
 

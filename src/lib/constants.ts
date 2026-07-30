@@ -1,37 +1,40 @@
-// Centralized premium imagery (external URLs for reliability with the singlefile build).
-// Pexels supports server-side resize/crop via query params → keeps payload light (Core Web Vitals).
+// ============================================================
+//  Sâhi Portföy — merkezi yapılandırma dosyası
+//  Tüm görseller + marka buradan yönetilir.
+// ============================================================
 
 const px = (id: number, w: number, h: number) =>
   `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=${w}&h=${h}`;
 
 /* ============================================================
-   BRANDING — your logo & tagline
+   MARKA — isim, logo ve slogan
    ------------------------------------------------------------
-   • logoUrl: to use YOUR logo, set this to "/images/logo.png"
-     (drop the file in the /public/images folder) or any image URL.
-     Leave it as `null` to keep the built-in ŞAHİ PORTFÖY monogram.
-   • tagline: the small line under the wordmark.
+   • logoUrl:  Kendi logonu kullanmak için "/images/logo.png"
+               yapın (dosyayı /public/images klasörüne koyun).
+               null bırakırsanız yerleşik "Sâhi Portföy" arması gösterilir.
+   • tagline:  Logonun altındaki küçük yazı / slogan.
    ============================================================ */
 export const brand = {
   logoUrl: null as string | null,
-  tagline: "Real Estate",
+  tagline: "Olduğu gibi", // doğru ürün · doğru fiyat
 };
 
 /* ============================================================
-   MEDIA — swap any URL below with YOUR own photo.
-   Use "/images/<file>.jpg" (file in /public/images) or any hosted URL.
-   Full list of slots is in /public/images/README.md
+   GÖRSELLER — her slotu kendi fotoğrafınla değiştirebilirsin.
+   Yöntem: dosyayı /public/images içine koy, sonra yolu
+   "/images/dosya-adi.jpg" olarak yaz (veya herhangi bir URL).
+   Detaylı tablo için: /public/images/README.md
    ============================================================ */
 export const images = {
   hero: px(7031407, 1920, 1280),
   heroThumb: px(7031407, 800, 1000),
 
-  // About
+  // Hakkımızda
   aboutMain: px(9614922, 1100, 1300),
   aboutInset: px(7722168, 720, 720),
   aboutSkyline: px(34734832, 720, 540),
 
-  // Portfolio cards (index-aligned with translations)
+  // Portföy kartları (6)
   portfolio: [
     px(16573669, 900, 1150),
     px(7031712, 900, 1150),
@@ -41,16 +44,26 @@ export const images = {
     px(7174113, 900, 1150),
   ],
 
-  // Gallery strip
+  /* ----------------------------------------------------------
+     GALERİ — KENDİ FOTOĞRAFLARIN
+     Buraya büyük projenden (blok daireler) ve anlaşma/çan
+     fotoğraflarını koy. Dosyaları /public/images/gallery/
+     klasörüne şu isimlerle ekle:
+       gallery-1.jpg ... gallery-6.jpg
+     (1–3 = büyük proje / blok daireler)
+     (4–6 = çan çalma / anlaşma anı)
+     İstersen isimleri değiştirebilir veya adet artırabilirsin.
+     ---------------------------------------------------------- */
   gallery: [
-    px(7031594, 700, 500),
-    px(8143677, 700, 500),
-    px(9614922, 700, 500),
-    px(8082328, 700, 500),
-    px(7031407, 700, 500),
+    "/images/gallery/gallery-1.jpg",
+    "/images/gallery/gallery-2.jpg",
+    "/images/gallery/gallery-3.jpg",
+    "/images/gallery/gallery-4.jpg",
+    "/images/gallery/gallery-5.jpg",
+    "/images/gallery/gallery-6.jpg",
   ],
 
-  // Testimonial avatars (index-aligned)
+  // Referans avatarları (4)
   avatars: [
     px(28442318, 200, 200),
     px(33680700, 200, 200),
@@ -68,5 +81,5 @@ export const social = {
 export const PHONE_DISPLAY = "+90 541 841 79 85";
 export const PHONE_TEL = "+905418417985";
 export const WHATSAPP_URL = `https://wa.me/${PHONE_TEL.replace("+", "")}?text=${encodeURIComponent(
-  "Merhaba, ŞAHİ PORTFÖY hakkında bilgi almak istiyorum."
+  "Merhaba, Sâhi Portföy hakkında bilgi almak istiyorum."
 )}`;

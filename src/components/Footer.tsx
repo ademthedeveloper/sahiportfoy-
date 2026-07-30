@@ -107,7 +107,7 @@ export function Footer() {
         {/* Bottom bar */}
         <div className="mt-14 flex flex-col items-center justify-between gap-5 border-t border-white/10 pt-7 sm:flex-row">
           <p className="text-center text-xs text-white/45 sm:text-left">
-            © {year} ŞAHİ PORTFÖY. {t.footer.rights}
+            © {year} Sâhi Portföy. {t.footer.rights}
           </p>
           <p className="order-3 text-[0.7rem] text-white/30 sm:order-2">{t.footer.disclaimer}</p>
           <a
