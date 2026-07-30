@@ -16,7 +16,7 @@ export const brand = {
 
 // Her slot = bir görsel. Dosyaları public/images içine aynı isimlerle koy.
 export const images = {
-  hero: "/images/hero.jpg", // Ana sayfa arka planı — 1920×1280 (yatay)
+  hero: "/images/hero.png", // Ana sayfa arka planı — 1920×1280 (yatay)
 
   // Hakkımızda bölümü
   aboutMain: "/images/about-main.jpg", // büyük görsel — 1100×1300 (dikey)
