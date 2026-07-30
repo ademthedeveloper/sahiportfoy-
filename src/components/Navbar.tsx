@@ -4,6 +4,7 @@ import { PHONE_DISPLAY, PHONE_TEL, social } from "@/lib/constants";
 import { cn } from "@/utils/cn";
 import { Logo, Menu, Close, ArrowRight, Phone } from "./icons";
 import { LanguageSwitcher } from "./LanguageSwitcher";
+import { ThemeToggle } from "./ThemeToggle";
 import { SocialLinks } from "./SocialLinks";
 
 const SECTIONS = ["home", "about", "services", "portfolio", "faq", "contact"] as const;
@@ -118,6 +119,8 @@ export function Navbar() {
           <div className="hidden sm:block">
             <LanguageSwitcher tone={dark ? "onDark" : "onLight"} />
           </div>
+
+          <ThemeToggle tone={dark ? "onDark" : "onLight"} />
 
           <a
             href="#contact"
