@@ -18,9 +18,6 @@ export const brand = {
 };
 
 export const images = {
-  hero:        "/images/hero.jpg",        // hero background — 1920×1280
-  heroThumb:   "/images/hero.jpg",
-
   // About
   aboutMain:    "/images/about-main.jpg",  // large About image — 1100×1300
   aboutInset:   "/images/about-inset.jpg", // small inset — 720×720
