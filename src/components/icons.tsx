@@ -247,7 +247,7 @@ export const TikTok = (p: IconProps) => (
 /* ---- Brand logo emblem + wordmark ---- */
 export function Logo({
   className = "",
-  mark = 40,
+  mark = 50,
   light = false,
 }: {
   className?: string;
@@ -260,13 +260,13 @@ export function Logo({
         <img
           src={brand.logoUrl}
           alt="Sâhi Portföy"
-          className="h-9 w-auto object-contain sm:h-10"
+          className="h-12 w-auto object-contain sm:h-14"
         />
       </span>
     );
   }
   return (
-    <span className={`inline-flex items-center gap-2.5 ${className}`}>
+    <span className={`inline-flex items-center gap-3 ${className}`}>
       <svg width={mark} height={mark} viewBox="0 0 40 40" fill="none" aria-hidden="true">
         <rect width="40" height="40" rx="11" fill="#0F172A" />
         <path d="M20 7.5 L30 16 L20 32.5 L10 16 Z" stroke="#C9A227" strokeWidth="1.4" opacity="0.9" />
@@ -275,14 +275,14 @@ export function Logo({
       </svg>
       <span className="flex flex-col leading-none">
         <span
-          className={`font-display text-[1.05rem] font-bold tracking-tight ${
+          className={`font-display text-[1.35rem] font-bold tracking-tight ${
             light ? "text-white" : "text-navy"
           }`}
         >
           Sâhi <span className="text-gold">Portföy</span>
         </span>
         <span
-          className={`mt-1 text-[0.6rem] font-semibold italic tracking-[0.04em] ${
+          className={`mt-1.5 text-[0.7rem] font-semibold italic tracking-[0.04em] ${
             light ? "text-white/55" : "text-muted"
           }`}
         >
