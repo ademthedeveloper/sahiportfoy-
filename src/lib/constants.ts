@@ -13,41 +13,49 @@ const px = (id: number, w: number, h: number) =>
    • tagline: the small line under the wordmark.
    ============================================================ */
 export const brand = {
-  logoUrl: "/images/logo.png",          // your logo (light/white version)
-  tagline: "Real Estate",                // small text under the logo
+  logoUrl: null as string | null,
+  tagline: "Real Estate",
 };
 
+/* ============================================================
+   MEDIA — swap any URL below with YOUR own photo.
+   Use "/images/<file>.jpg" (file in /public/images) or any hosted URL.
+   Full list of slots is in /public/images/README.md
+   ============================================================ */
 export const images = {
+  hero: px(7031407, 1920, 1280),
+  heroThumb: px(7031407, 800, 1000),
+
   // About
-  aboutMain:    "/images/about-main.jpg",  // large About image — 1100×1300
-  aboutInset:   "/images/about-inset.jpg", // small inset — 720×720
-  aboutSkyline: "/images/skyline.jpg",     // stats band background — 720×540
+  aboutMain: px(9614922, 1100, 1300),
+  aboutInset: px(7722168, 720, 720),
+  aboutSkyline: px(34734832, 720, 540),
 
-  // Portfolio cards (6)
+  // Portfolio cards (index-aligned with translations)
   portfolio: [
-    "/images/p1.jpg",
-    "/images/p2.jpg",
-    "/images/p3.jpg",
-    "/images/p4.jpg",
-    "/images/p5.jpg",
-    "/images/p6.jpg",
+    px(16573669, 900, 1150),
+    px(7031712, 900, 1150),
+    px(34150376, 900, 1150),
+    px(8143683, 900, 1150),
+    px(8082324, 900, 1150),
+    px(7174113, 900, 1150),
   ],
 
-  // Gallery strip (5)
+  // Gallery strip
   gallery: [
-    "/images/g1.jpg",
-    "/images/g2.jpg",
-    "/images/g3.jpg",
-    "/images/g4.jpg",
-    "/images/g5.jpg",
+    px(7031594, 700, 500),
+    px(8143677, 700, 500),
+    px(9614922, 700, 500),
+    px(8082328, 700, 500),
+    px(7031407, 700, 500),
   ],
 
-  // Testimonial avatars (4)
+  // Testimonial avatars (index-aligned)
   avatars: [
-    "/images/a1.jpg",
-    "/images/a2.jpg",
-    "/images/a3.jpg",
-    "/images/a4.jpg",
+    px(28442318, 200, 200),
+    px(33680700, 200, 200),
+    px(38740728, 200, 200),
+    px(8312669, 200, 200),
   ],
 };
 
