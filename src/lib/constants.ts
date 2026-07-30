@@ -10,13 +10,13 @@
 // ============================================================
 
 export const brand = {
-  logoUrl: null as string | null, // kendi logon için: "/images/logo.png"
+  logoUrl: "/images/logo.png", // kendi logon için: "/images/logo.png"
   tagline: "Olduğu gibi", // logonun altındaki küçük yazı (slogan)
 };
 
 // Her slot = bir görsel. Dosyaları public/images içine aynı isimlerle koy.
 export const images = {
-  hero: "/images/hero.jpg", // Ana sayfa arka planı — 1920×1280 (yatay)
+  hero: "/images/hero.png", // Ana sayfa arka planı — 1920×1280 (yatay)
 
   // Hakkımızda bölümü
   aboutMain: "/images/about-main.jpg", // büyük görsel — 1100×1300 (dikey)
